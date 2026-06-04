@@ -490,6 +490,7 @@
     gap: 12px;
     width: 350px;
     margin: auto;
+    overflow: hidden;
   }
 
   input,
@@ -501,6 +502,8 @@
     font-size: 0.95rem;
     outline: none;
     transition: 0.2s;
+    width: 100%;
+    max-width: 100%;
   }
 
   input:focus,
@@ -513,7 +516,23 @@
   textarea {
     resize: none;
   }
+  .input-group {
+  position: relative;
+}
 
+.fake-placeholder {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 238, 0.5);
+  pointer-events: none;
+  font-size: 0.9rem;
+}
+  input[type="date"] {
+    width: 100%;
+    min-width: 0;
+  }
   /* ================= FOOTER ================= */
 
   .footer {
