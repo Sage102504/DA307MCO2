@@ -2,7 +2,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-         <img src="/src/assets/CoffeeFirstLogo.png" alt="Coffee First Logo" />
+         <img src="/CoffeeFirstLogo.png" alt="Coffee First Logo" />
       </div>
 
       <ul>

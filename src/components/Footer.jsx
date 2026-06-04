@@ -7,15 +7,15 @@ export default function Footer() {
 
         <div className="social-icons">
           <a href="https://www.facebook.com/coffeefirstcalbayog" target="_blank" rel="noreferrer">
-            <img src="/src/assets/FacebookLogo.png" alt="Facebook" />
+            <img src="/FacebookLogo.png" alt="Facebook" />
           </a>
 
           <a href="https://www.instagram.com/coffeefirst_cyp/" target="_blank" rel="noreferrer">
-            <img src="/src/assets/InstagramLogo.png" alt="Instagram" />
+            <img src="/InstagramLogo.png" alt="Instagram" />
           </a>
 
           <a href="mailto:calbayog.coffee.first@gmail.com">
-            <img src="/src/assets/GmailLogo.png" alt="Gmail" />
+            <img src="/GmailLogo.png" alt="Gmail" />
           </a>
         </div>
 

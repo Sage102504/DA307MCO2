@@ -809,65 +809,53 @@ select {
 
 
 
+/* ================= MOBILE FIX ONLY (DO NOT AFFECT DESKTOP) ================= */
+
 @media (max-width: 768px) {
 
-  /* GENERAL */
-  section {
-    padding: 60px 6%;
-  }
-
-  /* HERO */
+  /* ===== HERO FIX ===== */
   .hero {
-    align-items: center;
-    text-align: center;
-    padding: 0 6%;
+    align-items: flex-end !important;
+    text-align: right !important;
+    padding: 0 6% !important;
   }
 
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 1.6rem !important;
+    white-space: nowrap; /* prevents "Coffee First" breaking */
   }
 
-  /* ABOUT → STACK */
-  .about-container {
-    flex-direction: column;
-    gap: 40px;
+  .hero h3 {
+    font-size: 1rem !important;
   }
 
-  .about-text {
-    max-width: 100%;
-    text-align: center;
+  .hero p {
+    font-size: 0.8rem !important;
   }
 
-  /* PODCAST → STACK */
-  .podcast-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  /* CONTACT FORM FIX */
+  /* ===== CONTACT FORM FIX ===== */
   .form {
-    width: 100%;
-    padding: 20px;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
   }
 
-  /* REVIEWS */
-  .reviews-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* NAVBAR (simple fix) */
-  .navbar ul {
-    gap: 10px;
-    font-size: 0.85rem;
-  }
-  .form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
+  input,
   textarea,
+  select {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
   .form .btn {
-    grid-column: span 2;
+    width: 100% !important;
+  }
+
+  /* ===== SECTION TEXT SCALING ===== */
+  .contact-us h2 {
+    font-size: 2.1rem !important;
   }
 }
