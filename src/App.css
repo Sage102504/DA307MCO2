@@ -5,6 +5,7 @@
     --light-beige: #f5efe6;
     --dark-beige: #cbb89d;
     --warm-beige: #cbb89d;
+    --navbar-height: 57px;
   }
 
   #root {
@@ -93,6 +94,7 @@
   /* ================= NAVBAR ================= */
 
   .navbar {
+    height: var(--navbar-height);
     position: fixed;
     top: 0;
     left: 0;
@@ -138,7 +140,8 @@
     left: 0;
 
     width: 100%;
-    height: calc(100vh - 57px);
+    top: var(--navbar-height);
+    height: calc(100vh - var(--navbar-height));
 
     display: flex;
     flex-direction: column;
@@ -812,6 +815,11 @@ select {
 /* ================= MOBILE FIX ONLY (DO NOT AFFECT DESKTOP) ================= */
 
 @media (max-width: 768px) {
+  @media (max-width: 768px) {
+  :root {
+    --navbar-height: 52px;
+  }
+}
 
   /* ================= NAVBAR FIX ================= */
   .navbar {
@@ -858,10 +866,20 @@ select {
   }
 
   .hero p {
-    font-size: 0.5rem !important;
+    font-size: 0.75rem !important;
   }
 
-  /* ================= ABOUT (2 ROW LAYOUT) ================= */
+  /* keep "Coffee First" from breaking */
+  .hero h1 {
+    white-space: nowrap;
+  }
+
+  /* ================= VIDEO TITLE ================= */
+  .video-section h1 {
+    font-size: 1.5rem !important;
+  }
+
+  /* ================= ABOUT (STACK LAYOUT) ================= */
   .about-container {
     flex-direction: column !important;
     gap: 30px !important;
@@ -877,6 +895,11 @@ select {
     font-size: 1.8rem !important;
   }
 
+  .about-images {
+    order: 2;
+    width: 100%;
+  }
+
   .about-cta-text {
     font-size: 0.85rem !important;
   }
@@ -886,20 +909,11 @@ select {
     padding: 10px 20px;
   }
 
-  .about-images {
-    order: 2;
-    width: 100%;
-  }
-
-  /* ================= PODCAST (2 ROW LAYOUT) ================= */
+  /* ================= PODCAST (STACK + WIDTH FIX) ================= */
   .podcast-container {
     flex-direction: column !important;
     text-align: center;
     gap: 25px !important;
-  }
-
-  .podcast-text {
-    order: 1;
   }
 
   .podcast-text h2 {
@@ -911,23 +925,29 @@ select {
     max-width: 100% !important;
   }
 
+  /* 🔥 THIS IS THE IMPORTANT FIX */
   .podcast-card {
-    order: 2;
+    width: 100% !important;
+    max-width: 420px !important;   /* matches your contact form vibe */
+    margin: 0 auto !important;
+    padding: 20px !important;
   }
 
   .podcast-visual {
-    width: 140px !important;
-    height: 140px !important;
+    width: 130px !important;
+    height: 130px !important;
+  }
+
+  audio {
+    width: 100% !important;
   }
 
   /* ================= CONTACT FORM FIX ================= */
   .form {
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 420px !important;
+    margin: auto !important;
     padding: 20px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
   }
 
   input,
