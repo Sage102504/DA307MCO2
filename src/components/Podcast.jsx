@@ -59,7 +59,7 @@ export default function Podcast() {
           </div>
 
           <audio ref={audioRef} controls>
-            <source src="/src/assets/podcast.mp3" type="audio/mp3" />
+            <source src="/podcast.mp3" type="audio/mp3" />
           </audio>
         </div>
 
